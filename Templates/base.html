@@ -13,19 +13,23 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Lightbox -->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}" />
-    <title>BT Real Estate</title>
+
+    <title>BT Real Estate {% block title %}{% endblock %}</title>
   </head>
+
   <body>
-    <!-- Top bar -->
+    <!-- Top Bar -->
     {% include 'partials/_topbar.html' %}
-    <!-- Navbar -->
-    {% include 'partials/_navbar.html' %} {% block content %} {% endblock %}
+    <!-- NavBar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main Content -->
+    {% block content %} {% endblock %}
     <!-- Footer -->
     {% include 'partials/_footer.html' %}
 
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/lightboxp.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/lightbox.min.js' %} "></script>
+    <script src="{% static 'js/main.js' %} "></script>
   </body>
 </html>
